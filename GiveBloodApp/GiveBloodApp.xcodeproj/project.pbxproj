@@ -13,6 +13,10 @@
 		5A685EB720C4CFED003D39C0 /* GiveBloodApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5A685EB520C4CFED003D39C0 /* GiveBloodApp.xcdatamodeld */; };
 		5A685EB920C4CFEE003D39C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A685EB820C4CFEE003D39C0 /* Assets.xcassets */; };
 		5A685EBC20C4CFEE003D39C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A685EBA20C4CFEE003D39C0 /* LaunchScreen.storyboard */; };
+		5A685EC620C62835003D39C0 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A685EC520C62835003D39C0 /* HistoryViewController.swift */; };
+		5A685EC820C62A45003D39C0 /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A685EC720C62A45003D39C0 /* HistoryTableViewCell.swift */; };
+		5A685ECA20C63279003D39C0 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A685EC920C63279003D39C0 /* NewsTableViewCell.swift */; };
+		5A685ECC20C633D2003D39C0 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A685ECB20C633D2003D39C0 /* NewsViewController.swift */; };
 		5D1BCB9520C4D981005DE660 /* Page ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1BCB9420C4D981005DE660 /* Page ViewController.swift */; };
 		5D1BCB9720C4F495005DE660 /* ViewControllerPG2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1BCB9620C4F495005DE660 /* ViewControllerPG2.swift */; };
 		5D1BCB9F20C51DA5005DE660 /* ViewControllerIB1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1BCB9E20C51DA5005DE660 /* ViewControllerIB1.swift */; };
@@ -27,6 +31,10 @@
 		5A685EB820C4CFEE003D39C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5A685EBB20C4CFEE003D39C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5A685EBD20C4CFEE003D39C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A685EC520C62835003D39C0 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		5A685EC720C62A45003D39C0 /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
+		5A685EC920C63279003D39C0 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
+		5A685ECB20C633D2003D39C0 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		5D1BCB9420C4D981005DE660 /* Page ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Page ViewController.swift"; sourceTree = "<group>"; };
 		5D1BCB9620C4F495005DE660 /* ViewControllerPG2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerPG2.swift; sourceTree = "<group>"; };
 		5D1BCB9E20C51DA5005DE660 /* ViewControllerIB1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerIB1.swift; sourceTree = "<group>"; };
@@ -74,6 +82,10 @@
 				5A685EBA20C4CFEE003D39C0 /* LaunchScreen.storyboard */,
 				5A685EBD20C4CFEE003D39C0 /* Info.plist */,
 				5A685EB520C4CFED003D39C0 /* GiveBloodApp.xcdatamodeld */,
+				5A685EC520C62835003D39C0 /* HistoryViewController.swift */,
+				5A685EC720C62A45003D39C0 /* HistoryTableViewCell.swift */,
+				5A685ECB20C633D2003D39C0 /* NewsViewController.swift */,
+				5A685EC920C63279003D39C0 /* NewsTableViewCell.swift */,
 			);
 			path = GiveBloodApp;
 			sourceTree = "<group>";
@@ -152,10 +164,14 @@
 			files = (
 				5D1BCB9F20C51DA5005DE660 /* ViewControllerIB1.swift in Sources */,
 				5D1BCB9720C4F495005DE660 /* ViewControllerPG2.swift in Sources */,
+				5A685EC820C62A45003D39C0 /* HistoryTableViewCell.swift in Sources */,
+				5A685ECC20C633D2003D39C0 /* NewsViewController.swift in Sources */,
 				5D1BCB9520C4D981005DE660 /* Page ViewController.swift in Sources */,
 				5A685EB720C4CFED003D39C0 /* GiveBloodApp.xcdatamodeld in Sources */,
 				5A685EB120C4CFED003D39C0 /* ViewController.swift in Sources */,
+				5A685EC620C62835003D39C0 /* HistoryViewController.swift in Sources */,
 				5A685EAF20C4CFED003D39C0 /* AppDelegate.swift in Sources */,
+				5A685ECA20C63279003D39C0 /* NewsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
