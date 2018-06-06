@@ -12,6 +12,7 @@ import CoreData
 class PersistenceService{
     
     private init(){}
+
     
     static var context: NSManagedObjectContext{
         return persistentContainer.viewContext
