@@ -26,6 +26,7 @@
 		5D1BCBAA20C761F3005DE660 /* HomeMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1BCBA920C761F3005DE660 /* HomeMap.swift */; };
 		5D1BCBAC20C76594005DE660 /* HomeMapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1BCBAB20C76594005DE660 /* HomeMapController.swift */; };
 		5D1BCBAE20C79645005DE660 /* MapAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1BCBAD20C79645005DE660 /* MapAnnotation.swift */; };
+		5D1BCBB020C7B838005DE660 /* ViewCellMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1BCBAF20C7B838005DE660 /* ViewCellMap.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		5D1BCBA920C761F3005DE660 /* HomeMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMap.swift; sourceTree = "<group>"; };
 		5D1BCBAB20C76594005DE660 /* HomeMapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMapController.swift; sourceTree = "<group>"; };
 		5D1BCBAD20C79645005DE660 /* MapAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAnnotation.swift; sourceTree = "<group>"; };
+		5D1BCBAF20C7B838005DE660 /* ViewCellMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCellMap.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				5D1BCBA720C63C3E005DE660 /* MapViewController.swift */,
+				5D1BCBAF20C7B838005DE660 /* ViewCellMap.swift */,
 				5D1BCBAD20C79645005DE660 /* MapAnnotation.swift */,
 				5D1BCBA920C761F3005DE660 /* HomeMap.swift */,
 				5D1BCB9E20C51DA5005DE660 /* ViewControllerIB1.swift */,
@@ -187,6 +190,7 @@
 				5A685EC820C62A45003D39C0 /* HistoryTableViewCell.swift in Sources */,
 				5A685ECC20C633D2003D39C0 /* NewsViewController.swift in Sources */,
 				5D1BCB9520C4D981005DE660 /* Page ViewController.swift in Sources */,
+				5D1BCBB020C7B838005DE660 /* ViewCellMap.swift in Sources */,
 				5D1BCBAE20C79645005DE660 /* MapAnnotation.swift in Sources */,
 				5A685EB720C4CFED003D39C0 /* GiveBloodApp.xcdatamodeld in Sources */,
 				5D1BCBA820C63C3E005DE660 /* MapViewController.swift in Sources */,
