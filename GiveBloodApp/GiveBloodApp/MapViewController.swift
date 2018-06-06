@@ -8,35 +8,40 @@
 
 import UIKit
 import MapKit
+import CoreLocation
 
 class MapViewController: UIViewController, CLLocationManagerDelegate {
 
     @IBOutlet weak var mapView: MKMapView!
     
     let locationManager = CLLocationManager()
-    
-    func locationManager(_manager: CLLocationManager, didUpdateLocations locations: [CLLocation]){
-        let location = locations[0]
-        let span: MKCoordinateSpan = MKCoordinateSpanMake(0.01, 0.01)
-        let userLocation: CLLocationCoordinate2D = CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude)
-        let region: MKCoordinateRegion = MKCoordinateRegionMake(userLocation, span)
-        mapView.setRegion(region, animated: true)
-        self.mapView.showsUserLocation = true
-    }
+    let event1 = CLLocationCoordinate2D(latitude: -6.222709, longitude: 106.652449)
+    var pin: annotaionPin!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
+        pin = annotaionPin(title: "Donor United", subtitle: "Donor United cabang tanggerang", coordinate: event1)
+        mapView.addAnnotation(pin)
         // Do any additional setup after loading the view.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]){
+        let location = locations[0]
+        
+        let span = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
+        let center = location.coordinate
+        let region = MKCoordinateRegion(center: center, span: span)
+    
+        mapView.setRegion(region, animated: true)
+        mapView.showsUserLocation = true
     }
+    
+    
+    
+    
     
 
     /*
