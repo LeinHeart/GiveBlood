@@ -20,5 +20,7 @@ extension PMI {
     @NSManaged public var nama: String?
     @NSManaged public var alamat: String?
     @NSManaged public var image: NSData?
+    @NSManaged public var latitude: Double
+    @NSManaged public var longitute: Double
 
 }
