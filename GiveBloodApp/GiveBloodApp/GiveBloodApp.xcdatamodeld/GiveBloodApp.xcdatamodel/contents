@@ -3,11 +3,15 @@
     <entity name="Event" representedClassName="Event" syncable="YES">
         <attribute name="alamat" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="image" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="nama" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="PMI" representedClassName="PMI" syncable="YES">
         <attribute name="alamat" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="image" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="longitute" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="nama" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Profile" representedClassName="Profile" syncable="YES">
@@ -17,8 +21,8 @@
         <attribute name="terakhirDonor" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Event" positionX="-63" positionY="-18" width="128" height="90"/>
-        <element name="PMI" positionX="-54" positionY="-9" width="128" height="90"/>
+        <element name="Event" positionX="-63" positionY="-18" width="128" height="120"/>
+        <element name="PMI" positionX="-54" positionY="-9" width="128" height="120"/>
         <element name="Profile" positionX="-36" positionY="9" width="128" height="105"/>
     </elements>
 </model>
