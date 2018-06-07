@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import CoreData
+
 
 class Page_ViewController: UIPageViewController, UIPageViewControllerDelegate, UIPageViewControllerDataSource {
     
@@ -17,16 +19,33 @@ class Page_ViewController: UIPageViewController, UIPageViewControllerDelegate, U
     }()
     
     var pageControl = UIPageControl()
+    
+    var profile = [Profile]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.delegate = self
         self.dataSource = self
-        if let firstView = orderedViewController.first {
-            setViewControllers([firstView], direction: .forward, animated: true, completion: nil)
+        let fetchRequest: NSFetchRequest<Profile> = Profile.fetchRequest()
+        do {
+            let profile = try PersistenceService.context.fetch(fetchRequest)
+            self.profile = profile
+        } catch {}
+        
+        if self.profile.count == 0{
+            print("data nil")
+            if let firstView = orderedViewController.first {
+                setViewControllers([firstView], direction: .forward, animated: true, completion: nil)
+            }
+            configurePageControl()
         }
-        configurePageControl()
+        else {
+            print("data tidak nil")
+            
+        }
+        
+        
 
         // Do any additional setup after loading the view.
     }

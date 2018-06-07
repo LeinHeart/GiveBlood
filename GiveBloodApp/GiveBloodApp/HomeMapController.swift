@@ -31,7 +31,7 @@ class HomeMapController: UIViewController, UITableViewDelegate, UITableViewDataS
         do {
             let profile = try PersistenceService.context.fetch(fetchRequest)
             self.profile = profile
-            tesNama.text = profile[0].name
+            tesNama.text = "Hi, " + profile[0].name!
             tesGolDar.text = profile[0].goldar
         } catch {}
         
