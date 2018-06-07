@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -112,6 +112,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="belumBtn:" destination="cQk-4U-rFs" eventType="touchUpInside" id="IZv-Nw-jKV"/>
                                     <segue destination="cfj-4i-ewS" kind="show" id="vdh-Sq-yfu"/>
                                 </connections>
                             </button>
@@ -123,6 +124,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="sudahBtn:" destination="cQk-4U-rFs" eventType="touchUpInside" id="YJG-IP-3XM"/>
                                     <segue destination="5qU-n6-vCv" kind="show" id="BiO-bP-ed3"/>
                                 </connections>
                             </button>
@@ -147,6 +149,7 @@
                     </view>
                     <connections>
                         <outlet property="buttonTitle" destination="3g1-kD-3hR" id="Sph-kI-dZj"/>
+                        <outlet property="isiNama" destination="gJJ-L0-3QY" id="Y2g-Rs-FCn"/>
                         <outlet property="pickerView" destination="oKq-E3-9w5" id="z4D-O0-pft"/>
                     </connections>
                 </viewController>
@@ -576,7 +579,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="bMk-Zx-2gT"/>
+        <segue reference="vdh-Sq-yfu"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.95659836018844724" green="1" blue="0.94892686144587457" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
 </document>

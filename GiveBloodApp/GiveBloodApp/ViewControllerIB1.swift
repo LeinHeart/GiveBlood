@@ -11,9 +11,12 @@ import UIKit
 class ViewControllerIB1: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
 
     let golDar = ["AB+", "A+", "B+", "O+", "O-", "B-", "A-", "AB-", "Tidak Tahu"]
+    let profile = Profile(context: PersistenceService)
     
+    @IBOutlet weak var isiNama: UITextField!
     @IBOutlet weak var buttonTitle: UIButton!
     @IBOutlet weak var pickerView: UIPickerView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -55,7 +58,16 @@ class ViewControllerIB1: UIViewController, UIPickerViewDataSource, UIPickerViewD
         pickerView.isHidden = true
     }
     
-
+    
+    @IBAction func belumBtn(_ sender: Any) {
+        
+    }
+    
+    
+    @IBAction func sudahBtn(_ sender: Any) {
+        
+    }
+    
     /*
     // MARK: - Navigation
 
