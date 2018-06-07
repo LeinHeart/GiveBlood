@@ -18,6 +18,12 @@
 		5A685ECA20C63279003D39C0 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A685EC920C63279003D39C0 /* NewsTableViewCell.swift */; };
 		5A685ECC20C633D2003D39C0 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A685ECB20C633D2003D39C0 /* NewsViewController.swift */; };
 		5A83DBBA20C7827700ABFF77 /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A83DBB920C7827700ABFF77 /* PersistenceService.swift */; };
+		5A83DBC120C798CA00ABFF77 /* Profile+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A83DBBB20C798CA00ABFF77 /* Profile+CoreDataClass.swift */; };
+		5A83DBC220C798CA00ABFF77 /* Profile+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A83DBBC20C798CA00ABFF77 /* Profile+CoreDataProperties.swift */; };
+		5A83DBCB20C7E54F00ABFF77 /* PMI+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A83DBC720C7E54F00ABFF77 /* PMI+CoreDataClass.swift */; };
+		5A83DBCC20C7E54F00ABFF77 /* PMI+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A83DBC820C7E54F00ABFF77 /* PMI+CoreDataProperties.swift */; };
+		5A83DBCD20C7E54F00ABFF77 /* Event+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A83DBC920C7E54F00ABFF77 /* Event+CoreDataClass.swift */; };
+		5A83DBCE20C7E54F00ABFF77 /* Event+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A83DBCA20C7E54F00ABFF77 /* Event+CoreDataProperties.swift */; };
 		5D1BCB9520C4D981005DE660 /* Page ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1BCB9420C4D981005DE660 /* Page ViewController.swift */; };
 		5D1BCB9720C4F495005DE660 /* ViewControllerPG2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1BCB9620C4F495005DE660 /* ViewControllerPG2.swift */; };
 		5D1BCB9F20C51DA5005DE660 /* ViewControllerIB1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1BCB9E20C51DA5005DE660 /* ViewControllerIB1.swift */; };
@@ -43,6 +49,12 @@
 		5A685EC920C63279003D39C0 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		5A685ECB20C633D2003D39C0 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		5A83DBB920C7827700ABFF77 /* PersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceService.swift; sourceTree = "<group>"; };
+		5A83DBBB20C798CA00ABFF77 /* Profile+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Profile+CoreDataClass.swift"; sourceTree = "<group>"; };
+		5A83DBBC20C798CA00ABFF77 /* Profile+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Profile+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		5A83DBC720C7E54F00ABFF77 /* PMI+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PMI+CoreDataClass.swift"; sourceTree = "<group>"; };
+		5A83DBC820C7E54F00ABFF77 /* PMI+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PMI+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		5A83DBC920C7E54F00ABFF77 /* Event+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Event+CoreDataClass.swift"; sourceTree = "<group>"; };
+		5A83DBCA20C7E54F00ABFF77 /* Event+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Event+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		5D1BCB9420C4D981005DE660 /* Page ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Page ViewController.swift"; sourceTree = "<group>"; };
 		5D1BCB9620C4F495005DE660 /* ViewControllerPG2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerPG2.swift; sourceTree = "<group>"; };
 		5D1BCB9E20C51DA5005DE660 /* ViewControllerIB1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerIB1.swift; sourceTree = "<group>"; };
@@ -85,6 +97,12 @@
 		5A685EAD20C4CFED003D39C0 /* GiveBloodApp */ = {
 			isa = PBXGroup;
 			children = (
+				5A83DBC720C7E54F00ABFF77 /* PMI+CoreDataClass.swift */,
+				5A83DBC820C7E54F00ABFF77 /* PMI+CoreDataProperties.swift */,
+				5A83DBC920C7E54F00ABFF77 /* Event+CoreDataClass.swift */,
+				5A83DBCA20C7E54F00ABFF77 /* Event+CoreDataProperties.swift */,
+				5A83DBBB20C798CA00ABFF77 /* Profile+CoreDataClass.swift */,
+				5A83DBBC20C798CA00ABFF77 /* Profile+CoreDataProperties.swift */,
 				5D1BCBA720C63C3E005DE660 /* MapViewController.swift */,
 				5D1BCBAF20C7B838005DE660 /* ViewCellMap.swift */,
 				5D1BCBAD20C79645005DE660 /* MapAnnotation.swift */,
@@ -185,6 +203,7 @@
 			files = (
 				5D1BCB9F20C51DA5005DE660 /* ViewControllerIB1.swift in Sources */,
 				5D1BCBA420C63912005DE660 /* Global Variable.swift in Sources */,
+				5A83DBCB20C7E54F00ABFF77 /* PMI+CoreDataClass.swift in Sources */,
 				5D1BCB9720C4F495005DE660 /* ViewControllerPG2.swift in Sources */,
 				5D1BCBAA20C761F3005DE660 /* HomeMap.swift in Sources */,
 				5A685EC820C62A45003D39C0 /* HistoryTableViewCell.swift in Sources */,
@@ -193,10 +212,15 @@
 				5D1BCBB020C7B838005DE660 /* ViewCellMap.swift in Sources */,
 				5D1BCBAE20C79645005DE660 /* MapAnnotation.swift in Sources */,
 				5A685EB720C4CFED003D39C0 /* GiveBloodApp.xcdatamodeld in Sources */,
+				5A83DBC220C798CA00ABFF77 /* Profile+CoreDataProperties.swift in Sources */,
 				5D1BCBA820C63C3E005DE660 /* MapViewController.swift in Sources */,
 				5A685EB120C4CFED003D39C0 /* ViewController.swift in Sources */,
 				5A83DBBA20C7827700ABFF77 /* PersistenceService.swift in Sources */,
+				5A83DBC120C798CA00ABFF77 /* Profile+CoreDataClass.swift in Sources */,
+				5A83DBCE20C7E54F00ABFF77 /* Event+CoreDataProperties.swift in Sources */,
 				5A685EC620C62835003D39C0 /* HistoryViewController.swift in Sources */,
+				5A83DBCD20C7E54F00ABFF77 /* Event+CoreDataClass.swift in Sources */,
+				5A83DBCC20C7E54F00ABFF77 /* PMI+CoreDataProperties.swift in Sources */,
 				5D1BCBAC20C76594005DE660 /* HomeMapController.swift in Sources */,
 				5A685EAF20C4CFED003D39C0 /* AppDelegate.swift in Sources */,
 				5A685ECA20C63279003D39C0 /* NewsTableViewCell.swift in Sources */,
