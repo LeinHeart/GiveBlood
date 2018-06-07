@@ -113,7 +113,7 @@
                                 </state>
                                 <connections>
                                     <action selector="belumBtn:" destination="cQk-4U-rFs" eventType="touchUpInside" id="IZv-Nw-jKV"/>
-                                    <segue destination="cfj-4i-ewS" kind="show" identifier="sudahDonor" id="vdh-Sq-yfu"/>
+                                    <segue destination="cfj-4i-ewS" kind="show" id="Btn-3Q-m2z"/>
                                 </connections>
                             </button>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oKq-E3-9w5">
@@ -139,7 +139,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="cfj-4i-ewS" kind="show" identifier="belumDonor" id="KkI-Ja-Zqr"/>
+                                    <segue destination="5qU-n6-vCv" kind="show" id="Fma-yZ-Yfc"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -594,7 +594,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="vdh-Sq-yfu"/>
+        <segue reference="Btn-3Q-m2z"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.95659836018844724" green="1" blue="0.94892686144587457" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
 </document>
