@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate, UITableViewDelegate, UITableViewDataSource {
+class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate, UITableViewDelegate, UITableViewDataSource{
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var mapView: MKMapView!
@@ -21,8 +21,10 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     
     
     let locationManager = CLLocationManager()
-    let event1 = CLLocationCoordinate2D(latitude: -6.222709, longitude: 106.652449)
+    public let event1 = CLLocationCoordinate2D(latitude: -6.222709, longitude: 106.652449)
     var pin: annotaionPin!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -76,7 +78,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         mapView.setRegion(region, animated: true)
         
         }
-    }
+
     /*func mapView(_ mapView:MKMapView, viewFor annotation: MKAnnotation)-> MKAnnotationView? {
         let annotationView = MKAnnotationView(annotation: pin, reuseIdentifier: "eventLoc")
         annotationView.image = UIImage(named: "mobil")
@@ -99,3 +101,4 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     */
 
 
+}
