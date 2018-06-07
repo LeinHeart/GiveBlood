@@ -35,5 +35,13 @@ class NewsViewController: UIViewController, UITableViewDataSource, UITableViewDe
         return cell
     }
     
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "selectedNews", sender: nil)
+    }
+    @IBAction func unwindSegue(_ sender:UIStoryboardSegue)
+    {
+        
+    }
+    
     
 }
