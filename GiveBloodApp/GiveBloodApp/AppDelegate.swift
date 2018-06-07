@@ -13,10 +13,23 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var profile = [Profile]()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let fetchRequest: NSFetchRequest<Profile> = Profile.fetchRequest()
+        do {
+            let profile = try PersistenceService.context.fetch(fetchRequest)
+            self.profile = profile
+        } catch {}
+        if self.profile.count != 0{
+        let mainStoryBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let tabViewController = mainStoryBoard.instantiateViewController(withIdentifier: "TabBarController1")
+            window?.rootViewController = tabViewController
+            
+        }
+        
         return true
     }
 
@@ -43,7 +56,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Saves changes in the application's managed object context before the application terminates.
         PersistenceService.saveContext()
     }
-
+    
+    
     
 
 }
