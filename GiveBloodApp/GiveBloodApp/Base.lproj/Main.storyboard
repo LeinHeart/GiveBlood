@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -113,7 +113,7 @@
                                 </state>
                                 <connections>
                                     <action selector="belumBtn:" destination="cQk-4U-rFs" eventType="touchUpInside" id="IZv-Nw-jKV"/>
-                                    <segue destination="cfj-4i-ewS" kind="show" id="vdh-Sq-yfu"/>
+                                    <segue destination="cfj-4i-ewS" kind="show" identifier="sudahDonor" id="vdh-Sq-yfu"/>
                                 </connections>
                             </button>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oKq-E3-9w5">
@@ -139,7 +139,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="5qU-n6-vCv" kind="show" id="BiO-bP-ed3"/>
+                                    <segue destination="cfj-4i-ewS" kind="show" identifier="belumDonor" id="KkI-Ja-Zqr"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -410,6 +410,13 @@
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BxU-fU-rK7">
+                                <rect key="frame" x="166" y="235" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="BNJ-89-Tmu"/>
@@ -417,6 +424,7 @@
                     <tabBarItem key="tabBarItem" title="Home" id="uxW-eQ-IG5"/>
                     <connections>
                         <outlet property="tableView" destination="Qah-xn-dzZ" id="vrK-4A-cyR"/>
+                        <outlet property="tesNama" destination="BxU-fU-rK7" id="tp1-hJ-VgJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WGB-nI-dTD" userLabel="First Responder" sceneMemberID="firstResponder"/>

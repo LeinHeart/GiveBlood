@@ -11,7 +11,9 @@ import UIKit
 class ViewControllerIB1: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
 
     let golDar = ["AB+", "A+", "B+", "O+", "O-", "B-", "A-", "AB-", "Tidak Tahu"]
-    let profile = Profile(context: PersistenceService)
+    
+    
+    var tampungGolDar:String = ""
     
     @IBOutlet weak var isiNama: UITextField!
     @IBOutlet weak var buttonTitle: UIButton!
@@ -55,16 +57,26 @@ class ViewControllerIB1: UIViewController, UIPickerViewDataSource, UIPickerViewD
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         buttonTitle.setTitle(golDar[row], for: .normal)
+        tampungGolDar = golDar[row]
         pickerView.isHidden = true
     }
     
     
     @IBAction func belumBtn(_ sender: Any) {
+        let profile = Profile(context: PersistenceService.context)
+        profile.name = isiNama.text!
+        profile.goldar = tampungGolDar
+        PersistenceService.saveContext()
+        
         
     }
     
     
     @IBAction func sudahBtn(_ sender: Any) {
+        let profile = Profile(context: PersistenceService.context)
+        profile.name = isiNama.text!
+        profile.goldar = tampungGolDar
+        PersistenceService.saveContext()
         
     }
     

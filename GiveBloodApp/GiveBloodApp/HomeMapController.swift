@@ -7,20 +7,31 @@
 //
 
 import UIKit
+import CoreData
+
 
 class HomeMapController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    @IBOutlet weak var tesNama: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
     let keyLokasi: [String] = ["Mall @ alam sutera", "Binus University"]
     let namaUDDLagi: [String] = ["Donor United", "Ayo Kita Donor"]
     
+    var profile = [Profile]()
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        let fetchRequest: NSFetchRequest<Profile> = Profile.fetchRequest()
+        do {
+            let profile = try PersistenceService.context.fetch(fetchRequest)
+            self.profile = profile
+            tesNama.text = profile[0].name
+        } catch {}
+        
         
 
         // Do any additional setup after loading the view.
