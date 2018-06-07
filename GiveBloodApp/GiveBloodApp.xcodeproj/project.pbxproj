@@ -24,6 +24,7 @@
 		5A83DBCC20C7E54F00ABFF77 /* PMI+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A83DBC820C7E54F00ABFF77 /* PMI+CoreDataProperties.swift */; };
 		5A83DBCD20C7E54F00ABFF77 /* Event+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A83DBC920C7E54F00ABFF77 /* Event+CoreDataClass.swift */; };
 		5A83DBCE20C7E54F00ABFF77 /* Event+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A83DBCA20C7E54F00ABFF77 /* Event+CoreDataProperties.swift */; };
+		5AF4120520C9030C008FA8F2 /* DonorTipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF4120420C9030C008FA8F2 /* DonorTipsViewController.swift */; };
 		5D1BCB9520C4D981005DE660 /* Page ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1BCB9420C4D981005DE660 /* Page ViewController.swift */; };
 		5D1BCB9720C4F495005DE660 /* ViewControllerPG2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1BCB9620C4F495005DE660 /* ViewControllerPG2.swift */; };
 		5D1BCB9F20C51DA5005DE660 /* ViewControllerIB1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1BCB9E20C51DA5005DE660 /* ViewControllerIB1.swift */; };
@@ -55,6 +56,7 @@
 		5A83DBC820C7E54F00ABFF77 /* PMI+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PMI+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		5A83DBC920C7E54F00ABFF77 /* Event+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Event+CoreDataClass.swift"; sourceTree = "<group>"; };
 		5A83DBCA20C7E54F00ABFF77 /* Event+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Event+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		5AF4120420C9030C008FA8F2 /* DonorTipsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonorTipsViewController.swift; sourceTree = "<group>"; };
 		5D1BCB9420C4D981005DE660 /* Page ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Page ViewController.swift"; sourceTree = "<group>"; };
 		5D1BCB9620C4F495005DE660 /* ViewControllerPG2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerPG2.swift; sourceTree = "<group>"; };
 		5D1BCB9E20C51DA5005DE660 /* ViewControllerIB1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerIB1.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				5A685EAE20C4CFED003D39C0 /* AppDelegate.swift */,
 				5A685EB020C4CFED003D39C0 /* ViewController.swift */,
 				5A685EB220C4CFED003D39C0 /* Main.storyboard */,
+				5AF4120420C9030C008FA8F2 /* DonorTipsViewController.swift */,
 				5D1BCBA220C613C3005DE660 /* CheckBoxHeader.h */,
 				5D1BCB9620C4F495005DE660 /* ViewControllerPG2.swift */,
 				5D1BCB9420C4D981005DE660 /* Page ViewController.swift */,
@@ -218,6 +221,7 @@
 				5A83DBBA20C7827700ABFF77 /* PersistenceService.swift in Sources */,
 				5A83DBC120C798CA00ABFF77 /* Profile+CoreDataClass.swift in Sources */,
 				5A83DBCE20C7E54F00ABFF77 /* Event+CoreDataProperties.swift in Sources */,
+				5AF4120520C9030C008FA8F2 /* DonorTipsViewController.swift in Sources */,
 				5A685EC620C62835003D39C0 /* HistoryViewController.swift in Sources */,
 				5A83DBCD20C7E54F00ABFF77 /* Event+CoreDataClass.swift in Sources */,
 				5A83DBCC20C7E54F00ABFF77 /* PMI+CoreDataProperties.swift in Sources */,
