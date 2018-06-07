@@ -14,6 +14,8 @@ class HomeMapController: UIViewController, UITableViewDelegate, UITableViewDataS
     
     @IBOutlet weak var tesNama: UILabel!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var tesGolDar: UILabel!
+    
     
     let keyLokasi: [String] = ["Mall @ alam sutera", "Binus University"]
     let namaUDDLagi: [String] = ["Donor United", "Ayo Kita Donor"]
@@ -30,6 +32,7 @@ class HomeMapController: UIViewController, UITableViewDelegate, UITableViewDataS
             let profile = try PersistenceService.context.fetch(fetchRequest)
             self.profile = profile
             tesNama.text = profile[0].name
+            tesGolDar.text = profile[0].goldar
         } catch {}
         
         
