@@ -71,7 +71,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         cell.alamatEvent.text = alamat[indexPath.row]
         
         cell.gambarEvent.image = gambar[indexPath.row]
-        
+    
         return cell
     }
     

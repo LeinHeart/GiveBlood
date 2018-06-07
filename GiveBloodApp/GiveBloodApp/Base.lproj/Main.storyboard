@@ -206,7 +206,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Yup-WI-lBJ">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Yup-WI-lBJ">
                                 <rect key="frame" x="0.0" y="208" width="375" height="521"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -218,19 +218,19 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="99.666666666666671"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Alamat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kjv-8t-H1q">
-                                                    <rect key="frame" x="184" y="40" width="176" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R2d-5e-gHT">
                                                     <rect key="frame" x="0.0" y="0.0" width="176" height="100"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nama Lokasi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KUd-YX-Es6">
                                                     <rect key="frame" x="184" y="10" width="176" height="22"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Alamat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kjv-8t-H1q">
+                                                    <rect key="frame" x="184" y="39" width="176" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                                     <nil key="textColor"/>
@@ -254,7 +254,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="MVI-0i-da2"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Maps" id="PSq-ED-ehG"/>
+                    <tabBarItem key="tabBarItem" title="Maps" image="mapapp" id="PSq-ED-ehG"/>
                     <connections>
                         <outlet property="mapView" destination="sK4-pG-Nmc" id="1fv-KG-Ae4"/>
                         <outlet property="tableView" destination="Yup-WI-lBJ" id="a35-nP-mO4"/>
@@ -315,7 +315,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="mTQ-1h-8kt"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="News" id="ZLR-fG-fZW"/>
+                    <tabBarItem key="tabBarItem" title="News" image="newsapp" id="ZLR-fG-fZW"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="39q-VC-I5N" id="jfc-e3-h70"/>
@@ -424,7 +424,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="BNJ-89-Tmu"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" id="uxW-eQ-IG5"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="homeapp" id="uxW-eQ-IG5"/>
                     <connections>
                         <outlet property="tableView" destination="Qah-xn-dzZ" id="vrK-4A-cyR"/>
                         <outlet property="tesGolDar" destination="EgZ-c6-skC" id="3mE-Xv-UB6"/>
@@ -494,7 +494,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="xSF-Rx-9FZ"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="History" id="fdP-OC-7Re"/>
+                    <tabBarItem key="tabBarItem" title="History" image="historyapp" id="fdP-OC-7Re"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="UwM-P8-5gW" id="Ita-Ma-uG3"/>
@@ -664,6 +664,12 @@
             <point key="canvasLocation" x="1844" y="-64.285714285714292"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="historyapp" width="25" height="28"/>
+        <image name="homeapp" width="25" height="25"/>
+        <image name="mapapp" width="17" height="25"/>
+        <image name="newsapp" width="25" height="26"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Btn-3Q-m2z"/>
     </inferredMetricsTieBreakers>
