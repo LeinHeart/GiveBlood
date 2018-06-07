@@ -43,6 +43,9 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         mapView.addAnnotation(pin)
         // Do any additional setup after loading the view.
     }
+    
+    //MARK: -show user location
+    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]){
         let location = locations[0]
         
@@ -67,6 +70,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         cell.alamatEvent.text = alamat[indexPath.row]
         return cell
     }
+    
+    //MARK: - redirect
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         indexList = indexPath.row
