@@ -18,6 +18,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     
     let namaEvent: [String] = ["Donor Darah United"]
     let alamat: [String] = ["Mall @ alam Sutera"]
+    let gambar: [UIImage] = UIImage(named: "mobilpmi")
     
     
     let locationManager = CLLocationManager()
