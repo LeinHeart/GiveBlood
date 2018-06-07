@@ -18,7 +18,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     
     let namaEvent: [String] = ["Donor Darah United"]
     let alamat: [String] = ["Mall @ alam Sutera"]
-    let gambar: [UIImage] = UIImage(named: "mobilpmi")
+    let gambar: [UIImage] = [UIImage(named: "mobil")!]
     
     
     let locationManager = CLLocationManager()
@@ -69,6 +69,9 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         cell.namaEvent.text = namaEvent[indexPath.row]
         
         cell.alamatEvent.text = alamat[indexPath.row]
+        
+        cell.gambarEvent.image = gambar[indexPath.row]
+        
         return cell
     }
     
