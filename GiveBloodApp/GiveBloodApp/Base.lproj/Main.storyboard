@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -368,9 +368,9 @@
                                         <rect key="frame" x="20" y="331" width="334" height="341"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <mutableString key="text">Social Innovations Camp Asia was recently held in Kuala Lumpur, and a while back we previewed the six great ideas with positive social impact that teams would work on during the event. One of those was Blood Donors Network, a non-profit initiative to create a database of regular blood donors in Asia.
+                                        <string key="text">Social Innovations Camp Asia was recently held in Kuala Lumpur, and a while back we previewed the six great ideas with positive social impact that teams would work on during the event. One of those was Blood Donors Network, a non-profit initiative to create a database of regular blood donors in Asia.
 
-I got in touch with Joel Barquez to find out more about how the idea for this project came about. He tells me that he recognized that in the Philippines, as in many countries, there ought to be a system in place to</mutableString>
+I got in touch with Joel Barquez to find out more about how the idea for this project came about. He tells me that he recognized that in the Philippines, as in many countries, there ought to be a system in place to</string>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
@@ -764,7 +764,7 @@ I got in touch with Joel Barquez to find out more about how the idea for this pr
         <image name="newsapp" width="25" height="26"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="bMk-Zx-2gT"/>
+        <segue reference="Btn-3Q-m2z"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.95659836018844724" green="1" blue="0.94892686144587457" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
 </document>
