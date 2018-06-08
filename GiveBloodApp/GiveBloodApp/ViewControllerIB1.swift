@@ -19,12 +19,17 @@ class ViewControllerIB1: UIViewController, UIPickerViewDataSource, UIPickerViewD
     @IBOutlet weak var buttonTitle: UIButton!
     @IBOutlet weak var pickerView: UIPickerView!
     
+    @IBOutlet weak var belumButton: UIButton!
+    @IBOutlet weak var sudahButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         
         pickerView.delegate = self
         pickerView.dataSource = self
         pickerView.isHidden = true
+        buttonTitle.layer.cornerRadius = 10
+        belumButton.layer.cornerRadius = 10
+        sudahButton.layer.cornerRadius = 10
 
         // Do any additional setup after loading the view.
     }
@@ -91,3 +96,5 @@ class ViewControllerIB1: UIViewController, UIPickerViewDataSource, UIPickerViewD
     */
 
 }
+
+

@@ -12,14 +12,16 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
 
     @IBOutlet weak var tableView: UITableView!
     
-    let lokasi:[String : String] = ["Living World" : "AlamSutra","MOAS" : "Alam Sutra","SMS" : "Gading Serpong"]
-    let keyLokasi:[String] = ["Living World","MOAS","SMS"]
+    let lokasi:[String : String] = ["Donor Darah United" : "1 Januari 2018","Yuk Donor Darah" : "24 Maret 2018","PMI cabang Tangerang" : "14 Mei 2018"]
+    let keyLokasi:[String] = ["Donor Darah United","Yuk Donor Darah","PMI cabang Tangerang"]
+    let gambar: UIImage = UIImage(named: "buspmi")!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
         // Do any additional setup after loading the view.
+        
         
     }
 
@@ -34,9 +36,10 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         cell.lokasiLbl.text = keyLokasi[indexPath.row]
         
-        
         cell.alamatLbl.text = lokasi[keyLokasi[indexPath.row]]
         
+        cell.gambarView.image = gambar
+        cell.gambarView.layer.cornerRadius = 20
         
         return cell
     }

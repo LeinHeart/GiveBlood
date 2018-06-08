@@ -1,22 +1,19 @@
 //
-//  SelectedNewsViewController.swift
+//  ViewControllerNewsDetail.swift
 //  GiveBloodApp
 //
-//  Created by Kristopher Chayadi on 07/06/18.
+//  Created by Terretino on 07/06/18.
 //  Copyright © 2018 Kristopher Chayadi. All rights reserved.
 //
 
 import UIKit
 
-class SelectedNewsViewController: UIViewController {
+class ViewControllerNewsDetail: UIViewController {
 
-    @IBOutlet weak var gambarNews: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
-        gambarNews.image = UIImage(named: "pmiguy")
     }
 
     override func didReceiveMemoryWarning() {

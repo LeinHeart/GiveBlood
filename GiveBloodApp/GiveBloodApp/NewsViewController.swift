@@ -10,7 +10,8 @@ import UIKit
 
 class NewsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    let judul:[String] = ["Donor Darah menyelamatkan banyak jiwa","Surabaya butuh darah"]
+    let judul:[String] = ["Blood donors network: A simple social innovation that can go a long way"]
+    var image: UIImage = UIImage(named: "pmiguy")!
 
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
@@ -30,7 +31,7 @@ class NewsViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let cell = tableView.dequeueReusableCell(withIdentifier: "customCell") as! NewsTableViewCell
         
         cell.judulLbl.text = judul[indexPath.row]
-        
+        cell.gambarView.image = image
         
         return cell
     }

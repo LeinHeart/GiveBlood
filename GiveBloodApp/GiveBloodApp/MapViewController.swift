@@ -17,8 +17,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     var indexList = 0
     
     let namaEvent: [String] = ["Donor Darah United"]
-    let alamat: [String] = ["Mall @ alam Sutera"]
-    let gambar: [UIImage] = [UIImage(named: "mobil")!]
+    let alamat: [String] = ["Mall @ Alam Sutera"]
+    let gambar: [UIImage] = [UIImage(named: "buspmi")!]
     
     
     let locationManager = CLLocationManager()
@@ -88,6 +88,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         
         }
 
+    
     /*func mapView(_ mapView:MKMapView, viewFor annotation: MKAnnotation)-> MKAnnotationView? {
         let annotationView = MKAnnotationView(annotation: pin, reuseIdentifier: "eventLoc")
         annotationView.image = UIImage(named: "mobil")

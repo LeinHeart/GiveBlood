@@ -12,9 +12,12 @@ import CoreData
 
 class HomeMapController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    
     @IBOutlet weak var tesNama: UILabel!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var tesGolDar: UILabel!
+    @IBOutlet weak var backGround: UIImageView!
+    @IBOutlet weak var buttonTips: UIButton!
     
     
     let keyLokasi: [String] = ["Mall @ alam sutera", "Binus University"]
@@ -27,6 +30,9 @@ class HomeMapController: UIViewController, UITableViewDelegate, UITableViewDataS
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        backGround.image = (UIImage(named: "atasanHome"))
+        buttonTips.layer.cornerRadius = 10
+        
         let fetchRequest: NSFetchRequest<Profile> = Profile.fetchRequest()
         do {
             let profile = try PersistenceService.context.fetch(fetchRequest)
@@ -34,6 +40,7 @@ class HomeMapController: UIViewController, UITableViewDelegate, UITableViewDataS
             tesNama.text = "Hi, " + profile[0].name!
             tesGolDar.text = profile[0].goldar
         } catch {}
+        
         
         
 

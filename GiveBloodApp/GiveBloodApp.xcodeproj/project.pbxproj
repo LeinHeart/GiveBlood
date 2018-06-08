@@ -35,6 +35,9 @@
 		5D1BCBAC20C76594005DE660 /* HomeMapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1BCBAB20C76594005DE660 /* HomeMapController.swift */; };
 		5D1BCBAE20C79645005DE660 /* MapAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1BCBAD20C79645005DE660 /* MapAnnotation.swift */; };
 		5D1BCBB020C7B838005DE660 /* ViewCellMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1BCBAF20C7B838005DE660 /* ViewCellMap.swift */; };
+		5DFC8D6E20C92223001BDDB0 /* ViewControllerNewsDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFC8D6D20C92223001BDDB0 /* ViewControllerNewsDetail.swift */; };
+		5DFC8D7020C98613001BDDB0 /* PG1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFC8D6F20C98613001BDDB0 /* PG1ViewController.swift */; };
+		5DFC8D7220C98694001BDDB0 /* IB1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFC8D7120C98694001BDDB0 /* IB1ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +72,9 @@
 		5D1BCBAB20C76594005DE660 /* HomeMapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMapController.swift; sourceTree = "<group>"; };
 		5D1BCBAD20C79645005DE660 /* MapAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAnnotation.swift; sourceTree = "<group>"; };
 		5D1BCBAF20C7B838005DE660 /* ViewCellMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCellMap.swift; sourceTree = "<group>"; };
+		5DFC8D6D20C92223001BDDB0 /* ViewControllerNewsDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerNewsDetail.swift; sourceTree = "<group>"; };
+		5DFC8D6F20C98613001BDDB0 /* PG1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PG1ViewController.swift; sourceTree = "<group>"; };
+		5DFC8D7120C98694001BDDB0 /* IB1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IB1ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,12 +122,15 @@
 				5A685EAE20C4CFED003D39C0 /* AppDelegate.swift */,
 				5A685EB020C4CFED003D39C0 /* ViewController.swift */,
 				5A685EB220C4CFED003D39C0 /* Main.storyboard */,
+				5DFC8D7120C98694001BDDB0 /* IB1ViewController.swift */,
+				5DFC8D6F20C98613001BDDB0 /* PG1ViewController.swift */,
 				5AF4120620C90ED1008FA8F2 /* SelectedNewsViewController.swift */,
 				5AF4120420C9030C008FA8F2 /* DonorTipsViewController.swift */,
 				5D1BCBA220C613C3005DE660 /* CheckBoxHeader.h */,
 				5D1BCB9620C4F495005DE660 /* ViewControllerPG2.swift */,
 				5D1BCB9420C4D981005DE660 /* Page ViewController.swift */,
 				5A685EB820C4CFEE003D39C0 /* Assets.xcassets */,
+				5DFC8D6D20C92223001BDDB0 /* ViewControllerNewsDetail.swift */,
 				5A685EBA20C4CFEE003D39C0 /* LaunchScreen.storyboard */,
 				5A685EBD20C4CFEE003D39C0 /* Info.plist */,
 				5A685EB520C4CFED003D39C0 /* GiveBloodApp.xcdatamodeld */,
@@ -212,11 +221,14 @@
 				5A83DBCB20C7E54F00ABFF77 /* PMI+CoreDataClass.swift in Sources */,
 				5D1BCB9720C4F495005DE660 /* ViewControllerPG2.swift in Sources */,
 				5D1BCBAA20C761F3005DE660 /* HomeMap.swift in Sources */,
+				5DFC8D7220C98694001BDDB0 /* IB1ViewController.swift in Sources */,
 				5A685EC820C62A45003D39C0 /* HistoryTableViewCell.swift in Sources */,
 				5A685ECC20C633D2003D39C0 /* NewsViewController.swift in Sources */,
 				5D1BCB9520C4D981005DE660 /* Page ViewController.swift in Sources */,
 				5D1BCBB020C7B838005DE660 /* ViewCellMap.swift in Sources */,
 				5D1BCBAE20C79645005DE660 /* MapAnnotation.swift in Sources */,
+				5DFC8D7020C98613001BDDB0 /* PG1ViewController.swift in Sources */,
+				5DFC8D6E20C92223001BDDB0 /* ViewControllerNewsDetail.swift in Sources */,
 				5A685EB720C4CFED003D39C0 /* GiveBloodApp.xcdatamodeld in Sources */,
 				5A83DBC220C798CA00ABFF77 /* Profile+CoreDataProperties.swift in Sources */,
 				5D1BCBA820C63C3E005DE660 /* MapViewController.swift in Sources */,
