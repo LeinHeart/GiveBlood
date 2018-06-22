@@ -16,15 +16,16 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     @IBOutlet weak var mapView: MKMapView!
     var indexList = 0
     
-    let namaEvent: [String] = ["Donor Darah United"]
-    let alamat: [String] = ["Mall @ Alam Sutera"]
-    let gambar: [UIImage] = [UIImage(named: "buspmi")!]
+    let namaEvent: [String] = ["Donor Darah United", "Kuy Donor"]
+    let alamat: [String] = ["Mall @ Alam Sutera", "AEON Mall BSD"]
+    let gambar: [UIImage] = [UIImage(named: "buspmi")!, UIImage(named: "buspmi")!]
     
     
     let locationManager = CLLocationManager()
     public let event1 = CLLocationCoordinate2D(latitude: -6.222709, longitude: 106.652449)
+    public let event2 = CLLocationCoordinate2D(latitude: -6.304715, longitude: 106.643998)
     var pin: annotaionPin!
-    
+    var pin2: annotaionPin!
     
     
     override func viewDidLoad() {
@@ -41,7 +42,10 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         
         pin = annotaionPin(title: "Donor United", subtitle: "Donor United cabang tanggerang", coordinate: event1)
         
+        pin2 = annotaionPin(title: "Kuy Donor", subtitle: "Kuy donor cabang tanggerang", coordinate: event2)
+        
         mapView.addAnnotation(pin)
+        mapView.addAnnotation(pin2)
         // Do any additional setup after loading the view.
     }
     
@@ -75,7 +79,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         return cell
     }
     
-    //MARK: - redirect
+    //MARK: - redirect 
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         indexList = indexPath.row
@@ -87,6 +91,16 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         mapView.setRegion(region, animated: true)
         
         }
+    
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        indexList = indexPath.row
+        
+        let location: CLLocationCoordinate2D = event2
+        let span = MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005)
+        let region = MKCoordinateRegion(center: location, span: span)
+        
+        mapView.setRegion(region, animated: true)
+    }
 
     
     /*func mapView(_ mapView:MKMapView, viewFor annotation: MKAnnotation)-> MKAnnotationView? {
