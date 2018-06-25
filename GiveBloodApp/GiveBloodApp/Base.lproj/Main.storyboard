@@ -263,6 +263,7 @@
                     <connections>
                         <outlet property="mapView" destination="sK4-pG-Nmc" id="1fv-KG-Ae4"/>
                         <outlet property="tableView" destination="Yup-WI-lBJ" id="a35-nP-mO4"/>
+                        <segue destination="Ln8-Zb-ofB" kind="show" identifier="next" id="2nr-rw-vh5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g6X-oy-3Kc" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -411,6 +412,72 @@ I got in touch with Joel Barquez to find out more about how the idea for this pr
                 <exit id="P0j-AQ-0UR" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="4768.8000000000002" y="1356.6502463054187"/>
+        </scene>
+        <!--View Controller After Map-->
+        <scene sceneID="BwY-kD-UFR">
+            <objects>
+                <viewController id="Ln8-Zb-ofB" customClass="ViewControllerAfterMap" customModule="GiveBloodApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="P6q-md-akS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZsD-CQ-anV">
+                                <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem id="Zb2-3E-ISF">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="5aU-d6-Chw">
+                                            <color key="tintColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <segue destination="cfj-4i-ewS" kind="show" id="oEZ-yW-XoC"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="A5n-rr-MMZ">
+                                <rect key="frame" x="0.0" y="339" width="375" height="223"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </mapView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Z7S-Ds-1ce">
+                                <rect key="frame" x="16" y="570" width="343" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vcn-UY-2iq">
+                                <rect key="frame" x="0.0" y="88" width="375" height="216"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jjy-Mz-zYb">
+                                <rect key="frame" x="23" y="254" width="329" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="29"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nXJ-3X-gye">
+                                <rect key="frame" x="39" y="510" width="296" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.72549019609999998" green="0.2274509804" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Saya Sudah Donor"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="fLt-Tp-Ju6"/>
+                    </view>
+                    <connections>
+                        <outlet property="eventImage" destination="vcn-UY-2iq" id="0qZ-Rg-w2x"/>
+                        <outlet property="judulEvent" destination="Jjy-Mz-zYb" id="SPz-TW-GbV"/>
+                        <outlet property="sayaSudahBtn" destination="nXJ-3X-gye" id="bQI-ZY-imc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O7Y-j6-ViE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4301.6000000000004" y="2144.3349753694583"/>
         </scene>
         <!--Home-->
         <scene sceneID="PiZ-Lw-LSa">
@@ -757,7 +824,7 @@ I got in touch with Joel Barquez to find out more about how the idea for this pr
         <image name="newsapp" width="25" height="26"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Btn-3Q-m2z"/>
+        <segue reference="oEZ-yW-XoC"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.95659836018844724" green="1" blue="0.94892686144587457" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
 </document>

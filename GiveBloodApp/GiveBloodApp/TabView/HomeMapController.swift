@@ -20,8 +20,8 @@ class HomeMapController: UIViewController, UITableViewDelegate, UITableViewDataS
     @IBOutlet weak var buttonTips: UIButton!
     
     
-    let keyLokasi: [String] = ["Mall @ Alam Sutera", "Binus University"]
-    let namaUDDLagi: [String] = ["Donor United", "Ayo Kita Donor"]
+    let keyLokasi: [String] = ["Mall @ Alam Sutera", "AEON Mall BSD"]
+    let namaUDDLagi: [String] = ["Donor United", "Kuy Donor"]
     
     var profile = [Profile]()
     

@@ -16,9 +16,11 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     @IBOutlet weak var mapView: MKMapView!
     var indexList = 0
     
-    let namaEvent: [String] = ["Donor Darah United", "Kuy Donor"]
-    let alamat: [String] = ["Mall @ Alam Sutera", "AEON Mall BSD"]
-    let gambar: [UIImage] = [UIImage(named: "buspmi")!, UIImage(named: "buspmi")!]
+    
+    let eventName: [String] = ["Donor Darah United", "Kuy Donor"]
+    let address: [String] = ["Mall @ Alam Sutera", "AEON Mall BSD"]
+    let eventImage: [UIImage] = [UIImage(named: "buspmi")!, UIImage(named: "buspmi")!]
+    var tempEventName : String = ""
     
     
     let locationManager = CLLocationManager()
@@ -40,7 +42,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
         
-        pin = annotaionPin(title: "Donor United", subtitle: "Donor United cabang tanggerang", coordinate: event1)
+        pin = annotaionPin(title: "Donor Darah United", subtitle: "Donor United cabang tanggerang", coordinate: event1)
         
         pin2 = annotaionPin(title: "Kuy Donor", subtitle: "Kuy donor cabang tanggerang", coordinate: event2)
         
@@ -64,20 +66,21 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection Section: Int) -> Int {
-        return namaEvent.count
+        return eventName.count
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "customCell") as! ViewCellMap
         
-        cell.namaEvent.text = namaEvent[indexPath.row]
+        cell.namaEvent.text = eventName[indexPath.row]
         
-        cell.alamatEvent.text = alamat[indexPath.row]
+        cell.alamatEvent.text = address[indexPath.row]
         
-        cell.gambarEvent.image = gambar[indexPath.row]
+        cell.gambarEvent.image = eventImage[indexPath.row]
     
         return cell
     }
+    
     
     //MARK: - redirect 
     
@@ -100,29 +103,22 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         let region = MKCoordinateRegion(center: location, span: span)
         
         mapView.setRegion(region, animated: true)
+
+    }
+    
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        let thisPin = view.annotation as? annotaionPin
+        
+        tempEventName = (thisPin?.title)!
+        performSegue(withIdentifier: "next", sender: self)
     }
 
-    
-    /*func mapView(_ mapView:MKMapView, viewFor annotation: MKAnnotation)-> MKAnnotationView? {
-        let annotationView = MKAnnotationView(annotation: pin, reuseIdentifier: "eventLoc")
-        annotationView.image = UIImage(named: "mobil")
-        let transform = CGAffineTransform(scaleX: 0.05, y: 0.05)
-        annotationView.transform = transform
-        return annotationView
-    }*/
-    
-    
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        var eventDetail = segue.destination as! ViewControllerAfterMap
+        eventDetail.selectedString = tempEventName
     }
-    */
 
+    
+    
 
 }

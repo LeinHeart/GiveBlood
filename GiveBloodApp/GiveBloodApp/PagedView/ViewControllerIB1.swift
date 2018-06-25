@@ -78,7 +78,6 @@ class ViewControllerIB1: UIViewController, UIPickerViewDataSource, UIPickerViewD
         profile.goldar = tampungGolDar
         PersistenceService.saveContext()
         
-        
     }
     
     
@@ -89,6 +88,8 @@ class ViewControllerIB1: UIViewController, UIPickerViewDataSource, UIPickerViewD
         PersistenceService.saveContext()
         
     }
+    
+    
     
     /*
     // MARK: - Navigation
