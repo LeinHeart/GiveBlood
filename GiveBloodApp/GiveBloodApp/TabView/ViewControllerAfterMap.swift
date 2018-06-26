@@ -11,6 +11,8 @@ import UIKit
 class ViewControllerAfterMap: UIViewController {
     
     
+    @IBOutlet weak var sudahDonor: UIButton!
+    
     var selectedString : String = ""
     @IBOutlet weak var judulEvent: UILabel!
     //@IBOutlet weak var mapView: MKMapView!
@@ -20,6 +22,8 @@ class ViewControllerAfterMap: UIViewController {
         super.viewDidLoad()
         judulEvent.text = selectedString
         eventImage.image = UIImage(named: "buspmi")
+        sudahDonor.layer.cornerRadius = 10
+        
         // Do any additional setup after loading the view.
     }
 

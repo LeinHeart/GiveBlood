@@ -10,14 +10,16 @@ import UIKit
 import CoreData
 
 
-class HomeMapController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class HomeMapController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     
+    @IBOutlet weak var profilePicture: UIImageView!
     @IBOutlet weak var tesNama: UILabel!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var tesGolDar: UILabel!
     @IBOutlet weak var backGround: UIImageView!
     @IBOutlet weak var buttonTips: UIButton!
+    @IBOutlet weak var addPictureBtn: UIButton!
     
     
     let keyLokasi: [String] = ["Mall @ Alam Sutera", "AEON Mall BSD"]
@@ -28,6 +30,8 @@ class HomeMapController: UIViewController, UITableViewDelegate, UITableViewDataS
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        profilePicture.layer.cornerRadius = profilePicture.frame.size.width/2
+        profilePicture.clipsToBounds = true
         tableView.delegate = self
         tableView.dataSource = self
         backGround.image = (UIImage(named: "atasanHome"))
@@ -57,6 +61,27 @@ class HomeMapController: UIViewController, UITableViewDelegate, UITableViewDataS
         cell.namaUDD.text = namaUDDLagi[indexPath.row]
         return cell
     }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage{
+            profilePicture.image = image
+        } else {
+            //error message
+        }
+        self.dismiss(animated: true, completion: nil)
+        
+    }
+    
+    @IBAction func addPicture(_ sender: Any) {
+        
+        
+        let image = UIImagePickerController()
+        image.delegate = self
+        image.sourceType = UIImagePickerControllerSourceType.photoLibrary
+        self.present(image, animated: true)
+            addPictureBtn.isHidden = true
+        
+}
     
     @IBAction func unwindSegue(_ sender: UIStoryboardSegue)
     {

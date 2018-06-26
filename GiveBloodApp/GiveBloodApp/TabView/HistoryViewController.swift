@@ -12,8 +12,8 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
 
     @IBOutlet weak var tableView: UITableView!
     
-    let lokasi:[String : String] = ["Donor Darah United" : "1 Januari 2018","Yuk Donor Darah" : "24 Maret 2018","PMI cabang Tangerang" : "14 Mei 2018"]
-    let keyLokasi:[String] = ["Donor Darah United","Yuk Donor Darah","PMI cabang Tangerang"]
+    let lokasi:[String : String] = ["Donor Darah United" : "1 Januari 2018","Yuk Donor Darah" : "24 Maret 2018","PMI Tangerang" : "14 Mei 2018"]
+    let keyLokasi:[String] = ["Donor Darah United","Yuk Donor Darah","PMI Tangerang"]
     let gambar: UIImage = UIImage(named: "buspmi")!
     
     override func viewDidLoad() {
