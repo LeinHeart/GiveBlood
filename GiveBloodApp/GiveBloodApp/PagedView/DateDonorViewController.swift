@@ -10,6 +10,7 @@ import UIKit
 
 class DateDonorViewController: UIViewController {
 
+    @IBOutlet weak var selesaiButton: UIButton!
     let picker = UIDatePicker()
     var dateString:String = ""
     
@@ -25,6 +26,8 @@ class DateDonorViewController: UIViewController {
         lastDonor.inputAccessoryView = dateToolbar
         lastDonor.inputView = picker
         picker.datePickerMode = .date
+        
+        selesaiButton.layer.cornerRadius = 10
         
         // Do any additional setup after loading the view.
     }
