@@ -24,7 +24,6 @@ class HomeMapController: UIViewController, UITableViewDelegate, UITableViewDataS
     
     let keyLokasi: [String] = ["Mall @ Alam Sutera", "AEON Mall BSD"]
     let namaUDDLagi: [String] = ["Donor United", "Kuy Donor"]
-    
     var profile = [Profile]()
     
 
@@ -37,7 +36,15 @@ class HomeMapController: UIViewController, UITableViewDelegate, UITableViewDataS
         backGround.image = (UIImage(named: "atasanHome"))
         buttonTips.layer.cornerRadius = 10
         
+        /*profilePicture.image = self.profilePicture.image
+        let imageData:NSData = UIImagePNGRepresentation(profilePicture.image!)! as NSData
+        
+        UserDefaults.standard.set(imageData, forKey: "savedImage")
+        
+        let data = UserDefaults.standard.object(forKey: "savedImage") as! NSData
+        profilePicture.image = UIImage(data: data as Data)*/
         let fetchRequest: NSFetchRequest<Profile> = Profile.fetchRequest()
+
         do {
             let profile = try PersistenceService.context.fetch(fetchRequest)
             self.profile = profile
@@ -45,10 +52,6 @@ class HomeMapController: UIViewController, UITableViewDelegate, UITableViewDataS
             tesGolDar.text = profile[0].goldar
         } catch {}
         
-        
-        
-
-        // Do any additional setup after loading the view.
     }
     public func tableView(_ tableView: UITableView, numberOfRowsInSection Section: Int) -> Int {
         return namaUDDLagi.count
@@ -62,11 +65,16 @@ class HomeMapController: UIViewController, UITableViewDelegate, UITableViewDataS
         return cell
     }
     
+    public func saveImg(){
+        profilePicture.image = self.profilePicture.image
+        let imageData:NSData = UIImagePNGRepresentation(profilePicture.image!)! as NSData
+    }
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage{
             profilePicture.image = image
         } else {
-            //error message
+            
         }
         self.dismiss(animated: true, completion: nil)
         
