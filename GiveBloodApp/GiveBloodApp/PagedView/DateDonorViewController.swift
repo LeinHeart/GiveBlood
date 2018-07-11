@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class DateDonorViewController: UIViewController {
 
@@ -48,7 +49,7 @@ class DateDonorViewController: UIViewController {
     
     @IBAction func doneBtn(_ sender: Any) {
         let profile = Profile(context: PersistenceService.context)
-        profile.terakhirDonor = dateString
+        profile.terakhirDonor = picker.date as NSDate?
     }
     
     /*

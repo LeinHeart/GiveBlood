@@ -9,7 +9,7 @@
 import UIKit
 
 class SelectedNewsViewController: UIViewController {
-
+    @IBOutlet weak var close: UIBarButtonItem!
     @IBOutlet weak var gambarNews: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,6 +17,7 @@ class SelectedNewsViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         gambarNews.image = UIImage(named: "pmiguy")
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,7 +25,10 @@ class SelectedNewsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func dismiss(_ sender: UIBarButtonItem) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     /*
     // MARK: - Navigation
 

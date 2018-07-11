@@ -26,7 +26,7 @@ class HomeMapController: UIViewController, UITableViewDelegate, UITableViewDataS
     let namaUDDLagi: [String] = ["Donor United", "Kuy Donor"]
     var profile = [Profile]()
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         profilePicture.layer.cornerRadius = profilePicture.frame.size.width/2
@@ -35,6 +35,8 @@ class HomeMapController: UIViewController, UITableViewDelegate, UITableViewDataS
         tableView.dataSource = self
         backGround.image = (UIImage(named: "atasanHome"))
         buttonTips.layer.cornerRadius = 10
+//        self.navigationController?.navigationBar.na
+//        self.preferredStatusBarStyle = .lightContent
         
         /*profilePicture.image = self.profilePicture.image
         let imageData:NSData = UIImagePNGRepresentation(profilePicture.image!)! as NSData
