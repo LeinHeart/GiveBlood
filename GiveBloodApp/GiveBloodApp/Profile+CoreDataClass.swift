@@ -2,7 +2,7 @@
 //  Profile+CoreDataClass.swift
 //  GiveBloodApp
 //
-//  Created by Kristopher Chayadi on 06/06/18.
+//  Created by Kristopher Chayadi on 10/07/18.
 //  Copyright © 2018 Kristopher Chayadi. All rights reserved.
 //
 //

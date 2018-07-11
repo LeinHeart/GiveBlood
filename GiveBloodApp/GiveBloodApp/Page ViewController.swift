@@ -8,7 +8,7 @@
 
 import UIKit
 import CoreData
-
+import UserNotifications
 
 class Page_ViewController: UIPageViewController, UIPageViewControllerDelegate, UIPageViewControllerDataSource {
     
@@ -24,6 +24,8 @@ class Page_ViewController: UIPageViewController, UIPageViewControllerDelegate, U
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         
         self.delegate = self
         self.dataSource = self
