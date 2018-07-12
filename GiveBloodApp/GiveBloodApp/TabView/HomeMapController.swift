@@ -65,11 +65,6 @@ class HomeMapController: UIViewController, UITableViewDelegate, UITableViewDataS
         return cell
     }
     
-    public func saveImg(){
-        profilePicture.image = self.profilePicture.image
-        let imageData:NSData = UIImagePNGRepresentation(profilePicture.image!)! as NSData
-    }
-    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage{
             profilePicture.image = image
