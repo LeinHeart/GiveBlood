@@ -1,23 +1,21 @@
 //
-//  SelectedNewsViewController.swift
+//  LaunchScreenViewController.swift
 //  GiveBloodApp
 //
-//  Created by Kristopher Chayadi on 07/06/18.
+//  Created by Kristopher Chayadi on 04/07/18.
 //  Copyright © 2018 Kristopher Chayadi. All rights reserved.
 //
 
 import UIKit
 
-class SelectedNewsViewController: UIViewController {
-    @IBOutlet weak var close: UIBarButtonItem!
-    @IBOutlet weak var gambarNews: UIImageView!
+
+class LaunchScreenViewController: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
         // Do any additional setup after loading the view.
-        
-        gambarNews.image = UIImage(named: "pmiguy")
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,10 +23,7 @@ class SelectedNewsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func dismiss(_ sender: UIBarButtonItem) {
-        self.dismiss(animated: true, completion: nil)
-    }
-    
+
     /*
     // MARK: - Navigation
 

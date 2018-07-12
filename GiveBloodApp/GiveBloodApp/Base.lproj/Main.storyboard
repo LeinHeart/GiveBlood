@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -262,20 +262,9 @@
                                 </prototypes>
                             </tableView>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="sK4-pG-Nmc">
-                                <rect key="frame" x="0.0" y="88" width="375" height="366"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="454"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </mapView>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b2u-76-dX5">
-                                <rect key="frame" x="0.0" y="44" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <color key="textColor" red="1" green="0.13876083880000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="Location" id="YNl-iW-pn0"/>
-                                </items>
-                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="MVI-0i-da2"/>
@@ -390,7 +379,7 @@
                                         <barButtonItem key="rightBarButtonItem" systemItem="stop" id="RWZ-Z5-cfA">
                                             <color key="tintColor" red="1" green="0.13876083880000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <connections>
-                                                <segue destination="P0j-AQ-0UR" kind="unwind" unwindAction="unwindSegue:" id="YLZ-a1-qOH"/>
+                                                <action selector="dismiss:" destination="mAF-7D-07T" id="wTR-ZX-SQs"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -411,6 +400,7 @@ I got in touch with Joel Barquez to find out more about how the idea for this pr
                         <viewLayoutGuide key="safeArea" id="lIr-qg-JfP"/>
                     </view>
                     <connections>
+                        <outlet property="close" destination="RWZ-Z5-cfA" id="QcJ-qf-1k3"/>
                         <outlet property="gambarNews" destination="gUz-Ku-1U3" id="LgN-fb-1Si"/>
                     </connections>
                 </viewController>
@@ -467,6 +457,9 @@ I got in touch with Joel Barquez to find out more about how the idea for this pr
                                 <color key="backgroundColor" red="1" green="0.13876083880000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                 <state key="normal" title="Saya Sudah Donor"/>
+                                <connections>
+                                    <action selector="donoredButton:" destination="Ln8-Zb-ofB" eventType="touchUpInside" id="daj-uv-9Ek"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -545,9 +538,16 @@ I got in touch with Joel Barquez to find out more about how the idea for this pr
                                 </prototypes>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EgZ-c6-skC">
-                                <rect key="frame" x="166" y="326" width="42" height="21"/>
+                                <rect key="frame" x="99" y="326" width="174" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BxU-fU-rK7">
+                                <rect key="frame" x="58" y="76" width="258" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -585,11 +585,11 @@ I got in touch with Joel Barquez to find out more about how the idea for this pr
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BxU-fU-rK7">
-                                <rect key="frame" x="58" y="99" width="258" height="42"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d64-5i-bbT">
+                                <rect key="frame" x="36" y="372" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -597,6 +597,7 @@ I got in touch with Joel Barquez to find out more about how the idea for this pr
                         <viewLayoutGuide key="safeArea" id="BNJ-89-Tmu"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="homeapp" id="uxW-eQ-IG5"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="addPictureBtn" destination="4YA-zG-iMZ" id="gl6-7s-b0u"/>
                         <outlet property="backGround" destination="4CS-Uv-W7Z" id="LlS-bG-qdj"/>
@@ -630,7 +631,7 @@ I got in touch with Joel Barquez to find out more about how the idea for this pr
                                     <navigationItem title="History" id="aag-8O-Obi"/>
                                 </items>
                             </navigationBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UwM-P8-5gW">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="70" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UwM-P8-5gW">
                                 <rect key="frame" x="0.0" y="98" width="375" height="259"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -863,7 +864,7 @@ I got in touch with Joel Barquez to find out more about how the idea for this pr
         <image name="pgImg3" width="383" height="294"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="bMk-Zx-2gT"/>
+        <segue reference="Btn-3Q-m2z"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.95659836018844724" green="1" blue="0.94892686144587457" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
 </document>

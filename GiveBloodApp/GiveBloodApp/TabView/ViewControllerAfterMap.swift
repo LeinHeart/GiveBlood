@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 class ViewControllerAfterMap: UIViewController {
     
@@ -32,7 +33,20 @@ class ViewControllerAfterMap: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func donoredButton(_ sender: Any) {
+        let content = UNMutableNotificationContent()
+        content.title = "Terima Kasih!"
+        content.subtitle = "Anda Telah Menyelamatkan Banyak Orang!"
+        content.body = "Kami Akan Memberitahukan Jadwal Donor Anda Selanjutnya"
+        content.badge = 1
+        
+        //let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 0.5, repeats: false)
+        
+        let request = UNNotificationRequest(identifier: "Donored", content: content, trigger: nil)
+        
+        UNUserNotificationCenter.current().add( request, withCompletionHandler: nil)
+    }
+    
     /*
     // MARK: - Navigation
 

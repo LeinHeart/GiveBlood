@@ -1,49 +1,22 @@
 //
 //  AppDelegate.swift
-//  GiveBloodApp
+//  AutoLayoutBridgeMC2
 //
-//  Created by Kristopher Chayadi on 04/06/18.
+//  Created by Kristopher Chayadi on 04/07/18.
 //  Copyright © 2018 Kristopher Chayadi. All rights reserved.
 //
 
 import UIKit
-import CoreData
-import UserNotifications
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate,UNUserNotificationCenterDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var profile = [Profile]()
+
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
-        let fetchRequest: NSFetchRequest<Profile> = Profile.fetchRequest()
-        do {
-            let profile = try PersistenceService.context.fetch(fetchRequest)
-            self.profile = profile
-        } catch {}
-        if self.profile.count != 0{
-        let mainStoryBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let tabViewController = mainStoryBoard.instantiateViewController(withIdentifier: "TabBarController1")
-            window?.rootViewController = tabViewController
-            
-        }
-        
-    UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge], completionHandler: {didAllow, error in})
-        
-        UNUserNotificationCenter.current().delegate = self
-        
         return true
-    }
-    
-    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-        completionHandler(.alert)
-    }
-    
-    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
-        //
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
@@ -66,12 +39,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UNUserNotificationCenterDe
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-        // Saves changes in the application's managed object context before the application terminates.
-        PersistenceService.saveContext()
     }
-    
-    
-    
+
 
 }
 
