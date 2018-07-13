@@ -20,6 +20,6 @@ extension Profile {
     @NSManaged public var donorLagi: NSDate?
     @NSManaged public var goldar: String?
     @NSManaged public var name: String?
-    @NSManaged public var terakhirDonor: NSDate?
+    @NSManaged public var terakhirDonor: String?
 
 }

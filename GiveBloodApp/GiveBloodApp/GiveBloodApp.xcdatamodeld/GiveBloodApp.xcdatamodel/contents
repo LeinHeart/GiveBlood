@@ -18,7 +18,7 @@
         <attribute name="donorLagi" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="goldar" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="terakhirDonor" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="terakhirDonor" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
         <element name="Event" positionX="-63" positionY="-18" width="128" height="120"/>

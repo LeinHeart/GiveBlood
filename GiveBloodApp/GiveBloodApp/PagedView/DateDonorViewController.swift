@@ -34,22 +34,30 @@ class DateDonorViewController: UIViewController {
     }
     
         @objc func dateDonePressed() {
-        
-            let formatter = DateFormatter()
-            formatter.dateStyle = .medium
-            formatter.timeStyle = .none
-            dateString = formatter.string(from: picker.date)
-            lastDonor.text = dateString
+            let fetchRequest: NSFetchRequest<Profile> = Profile.fetchRequest()
+            
+            do {
+                let profile = try PersistenceService.context.fetch(fetchRequest)
+                
+                let formatter = DateFormatter()
+                formatter.dateStyle = .medium
+                formatter.timeStyle = .none
+                dateString = formatter.string(from: picker.date)
+                lastDonor.text = dateString
+                
+                profile[0].terakhirDonor = dateString
+                PersistenceService.saveContext()
+                
+            } catch {}
+            
             self.view.endEditing(true)
+            
+            self.performSegue(withIdentifier: "toHomeID", sender: self)
+            
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    @IBAction func doneBtn(_ sender: Any) {
-        let profile = Profile(context: PersistenceService.context)
-        profile.terakhirDonor = picker.date as NSDate?
     }
     
     /*

@@ -20,11 +20,13 @@ class HomeMapController: UIViewController, UITableViewDelegate, UITableViewDataS
     @IBOutlet weak var backGround: UIImageView!
     @IBOutlet weak var buttonTips: UIButton!
     @IBOutlet weak var addPictureBtn: UIButton!
+    @IBOutlet weak var lastDonorLbl: UILabel!
     
     
     let keyLokasi: [String] = ["Mall @ Alam Sutera", "AEON Mall BSD"]
     let namaUDDLagi: [String] = ["Donor United", "Kuy Donor"]
     var profile = [Profile]()
+    var dateString:String = ""
     
     
     override func viewDidLoad() {
@@ -35,6 +37,8 @@ class HomeMapController: UIViewController, UITableViewDelegate, UITableViewDataS
         tableView.dataSource = self
         backGround.image = (UIImage(named: "atasanHome"))
         buttonTips.layer.cornerRadius = 10
+        
+        
 //        self.navigationController?.navigationBar.na
 //        self.preferredStatusBarStyle = .lightContent
         
@@ -49,9 +53,18 @@ class HomeMapController: UIViewController, UITableViewDelegate, UITableViewDataS
 
         do {
             let profile = try PersistenceService.context.fetch(fetchRequest)
-            self.profile = profile
             tesNama.text = "Hi, " + profile[0].name!
             tesGolDar.text = profile[0].goldar
+            lastDonorLbl.text = profile[0].terakhirDonor
+            print(profile[0])
+            
+            let formatter = DateFormatter()
+            formatter.dateStyle = .medium
+            formatter.timeStyle = .none
+//            print(profile[0].terakhirDonor)
+//            dateString = formatter.string(from: (profile[0].terakhirDonor as Date?)!)
+//            lastDonorLbl.text = dateString
+            
         } catch {}
         
     }
